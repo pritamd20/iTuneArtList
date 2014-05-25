@@ -7,8 +7,8 @@
 //
 
 #import "MasterViewController.h"
-
 #import "DetailViewController.h"
+#import "ArtworkModel.h"
 
 @interface MasterViewController () {
     NSMutableArray *_objects;
@@ -100,5 +100,8 @@
         //[[segue destinationViewController] setDetailItem:object];
     }
 }
+
+
+
 
 @end

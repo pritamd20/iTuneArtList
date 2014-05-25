@@ -12,5 +12,6 @@
 
 @property (strong, nonatomic) UISearchBar *searchBar;
 
+@property (strong, nonatomic) NSMutableArray *parsedResultArray;
 
 @end
