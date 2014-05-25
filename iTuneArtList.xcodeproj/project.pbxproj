@@ -22,6 +22,7 @@
 		82ABE9741932857B0094D566 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82ABE9531932857B0094D566 /* UIKit.framework */; };
 		82ABE97C1932857B0094D566 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 82ABE97A1932857B0094D566 /* InfoPlist.strings */; };
 		82ABE97E1932857B0094D566 /* iTuneArtListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 82ABE97D1932857B0094D566 /* iTuneArtListTests.m */; };
+		82ABE98A1932B2580094D566 /* ArtworkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 82ABE9891932B2580094D566 /* ArtworkModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		82ABE9791932857B0094D566 /* iTuneArtListTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iTuneArtListTests-Info.plist"; sourceTree = "<group>"; };
 		82ABE97B1932857B0094D566 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		82ABE97D1932857B0094D566 /* iTuneArtListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iTuneArtListTests.m; sourceTree = "<group>"; };
+		82ABE9881932B2580094D566 /* ArtworkModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtworkModel.h; sourceTree = "<group>"; };
+		82ABE9891932B2580094D566 /* ArtworkModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtworkModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,7 @@
 		82ABE9431932857B0094D566 = {
 			isa = PBXGroup;
 			children = (
+				82ABE9871932B2580094D566 /* Model */,
 				82ABE9551932857B0094D566 /* iTuneArtList */,
 				82ABE9771932857B0094D566 /* iTuneArtListTests */,
 				82ABE94E1932857B0094D566 /* Frameworks */,
@@ -155,6 +159,15 @@
 				82ABE97A1932857B0094D566 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		82ABE9871932B2580094D566 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				82ABE9881932B2580094D566 /* ArtworkModel.h */,
+				82ABE9891932B2580094D566 /* ArtworkModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82ABE9601932857B0094D566 /* AppDelegate.m in Sources */,
+				82ABE98A1932B2580094D566 /* ArtworkModel.m in Sources */,
 				82ABE9661932857B0094D566 /* MasterViewController.m in Sources */,
 				82ABE95C1932857B0094D566 /* main.m in Sources */,
 				82ABE9691932857B0094D566 /* DetailViewController.m in Sources */,
@@ -462,6 +476,7 @@
 				82ABE9831932857B0094D566 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		82ABE9841932857B0094D566 /* Build configuration list for PBXNativeTarget "iTuneArtListTests" */ = {
 			isa = XCConfigurationList;
@@ -470,6 +485,7 @@
 				82ABE9861932857B0094D566 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
