@@ -53,7 +53,7 @@
     
     NSString *searchString = [self.searchBar.text stringByReplacingOccurrencesOfString:@" " withString:@"+"];
     
-    //[self searchWithKeyWord:searchString];
+    [self searchWithKeyWord:searchString];
     
     self.title = self.searchBar.text;
     
@@ -79,26 +79,122 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return [self.parsedResultArray count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    
+    
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    if (!cell)
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+    }
+    
+    
+    ArtworkModel * artworkObject = [self.parsedResultArray objectAtIndex:indexPath.row];
+    cell.imageView.frame = CGRectMake(0,0,32,32);
+    cell.imageView.image = [UIImage imageNamed:@"paceholder.png"];
 
-       cell.textLabel.text = @"qwe";
+    
+    //////
+    UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    indicator.frame = CGRectMake(0,0,50,50);
+    [cell addSubview:indicator];
+    [indicator bringSubviewToFront:self.view];
+    [indicator startAnimating];
+    
+    
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH,  0ul);
+    dispatch_async(queue, ^{
+        //This is what you will load lazily
+        // NSString *u=[NSString stringWithContentsOfFile:artworkObject.artworkUrl encoding:NSUTF8StringEncoding error:nil];
+        NSURL *imageURL=[NSURL URLWithString:artworkObject.artworkUrl];
+        NSData *image=[NSData dataWithContentsOfURL:imageURL];
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+            cell.imageView.image=[UIImage imageWithData:image];
+            [cell setNeedsLayout];
+            [indicator stopAnimating];
+            
+        });
+    });
+    
+    /////
+    
+    cell.textLabel.text = artworkObject.trackName;
+    cell.detailTextLabel.text = artworkObject.artistName;
     return cell;
+
+    
+    
 }
 
 
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    
+    [self.searchBar resignFirstResponder];
+    
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
-       // NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        //NSDate *object = _objects[indexPath.row];
-        //[[segue destinationViewController] setDetailItem:object];
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        [[segue destinationViewController] setArtworkObject:[self.parsedResultArray objectAtIndex:indexPath.row]];
     }
+}
+
+
+
+
+#pragma mark - Server Call
+
+- (void)searchWithKeyWord:(NSString *)keyword{
+    
+    NSLog(@"key :%@",keyword);
+    
+    NSString *urlString = [NSString stringWithFormat:@"http://itunes.apple.com/search?term=%@",keyword];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        
+        NSData* data = [NSData dataWithContentsOfURL:
+                        [NSURL URLWithString:urlString]
+                        ];
+        NSDictionary* json = nil;
+        if (data) {
+            json = [NSJSONSerialization
+                    JSONObjectWithData:data
+                    options:kNilOptions
+                    error:nil];
+            NSLog(@"json : %@",json);
+            NSLog(@"%@", [NSThread currentThread]);
+            NSArray *result = [json objectForKey:@"results"];
+            self.parsedResultArray = [[NSMutableArray alloc]init];
+            
+            for (NSDictionary *artworkDic in result) {
+                [artworkDic objectForKey:@""];
+                
+                ArtworkModel *artworkObj = [[ArtworkModel alloc]initWithTrackName:[artworkDic objectForKey:@"trackName"] albumName:[artworkDic objectForKey:@"collectionCensoredName"] artworkUrl:[artworkDic objectForKey:@"artworkUrl100"] artistName:[artworkDic objectForKey:@"artistName"] price:[[artworkDic objectForKey:@"trackPrice"] stringValue] releaseDate:[artworkDic objectForKey:@"releaseDate"]];
+                
+                NSLog(@"Name :%@", artworkObj.trackName);
+                [self.parsedResultArray addObject:artworkObj];
+            }
+            
+        }
+        
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            NSLog(@"main");
+            NSLog(@"%@", [NSThread currentThread]);
+            [self.tableView reloadData];
+            
+        });
+        
+    });
+    
 }
 
 
