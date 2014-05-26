@@ -1,7 +1,7 @@
 iTuneArtList
 ============
 
-iPhone Application
+iPhone Application (Tested for iOS 6 +)
 
 Simple iPhone application demonstrating JSON parsing and Lazy loading 
 
@@ -19,5 +19,17 @@ Detail
 
 - Title set to tack name 
    - The detail view is about particular track , So its good to show track name on top like heading 
+   
+
+Improvement
+- Network reachability alerts  
+- Invaild search term alerts
+- Error alerts for data or connection 
+- Swipe cell to add a track to fav
+- Fav list (local)
+
+iPad app devlopment 
+
+Can develope with split view controller. Need to add search bar in master view since adding search bar to navigation item (as in current app ) will not work. Since detail view is visible as soon as app is opend the default UILabel titles will show on screen, need to handal it. 
    
  
