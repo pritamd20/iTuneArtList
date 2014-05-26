@@ -50,7 +50,7 @@
         self.priceLabel.text = @"(price not avilable)";
     }
     else{
-        self.priceLabel.text = self.artworkObject.price;
+        self.priceLabel.text = [NSString stringWithFormat:@"%@ (%@)",self.artworkObject.price,self.artworkObject.currency];
     }
     
     if (self.artworkObject.releaseDate == nil) {

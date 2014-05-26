@@ -22,9 +22,11 @@
 
 @property (strong, nonatomic) NSString * price;
 
+@property (strong, nonatomic) NSString * currency;
+
 @property (strong, nonatomic) NSString * releaseDate;
 
 
-- (id)initWithTrackName:(NSString *)trackName albumName:(NSString *)albumName artworkUrl:(NSString *)artworkUrl artistName:(NSString *)artistName price:(NSString *)price releaseDate:(NSString *)releaseDate;
+- (id)initWithTrackName:(NSString *)trackName albumName:(NSString *)albumName artworkUrl:(NSString *)artworkUrl artistName:(NSString *)artistName price:(NSString *)price releaseDate:(NSString *)releaseDate currency:(NSString*)currency;
 
 @end

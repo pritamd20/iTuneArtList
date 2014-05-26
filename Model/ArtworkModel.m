@@ -12,7 +12,7 @@
 
 
 
-- (id)initWithTrackName:(NSString *)trackName albumName:(NSString *)albumName artworkUrl:(NSString *)artworkUrl artistName:(NSString *)artistName price:(NSString *)price releaseDate:(NSString *)releaseDate {
+- (id)initWithTrackName:(NSString *)trackName albumName:(NSString *)albumName artworkUrl:(NSString *)artworkUrl artistName:(NSString *)artistName price:(NSString *)price releaseDate:(NSString *)releaseDate currency:(NSString*)currency {
     
     self.trackName = trackName;
     self.albumName = albumName;
@@ -20,7 +20,7 @@
     self.artistName = artistName;
     self.price = price;
     self.releaseDate = releaseDate;
-   
+    self.currency = currency;
     return self;
 }
 @end

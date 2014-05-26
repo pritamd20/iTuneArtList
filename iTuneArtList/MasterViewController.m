@@ -176,7 +176,7 @@
             for (NSDictionary *artworkDic in result) {
                 [artworkDic objectForKey:@""];
                 
-                ArtworkModel *artworkObj = [[ArtworkModel alloc]initWithTrackName:[artworkDic objectForKey:@"trackName"] albumName:[artworkDic objectForKey:@"collectionCensoredName"] artworkUrl:[artworkDic objectForKey:@"artworkUrl100"] artistName:[artworkDic objectForKey:@"artistName"] price:[[artworkDic objectForKey:@"trackPrice"] stringValue] releaseDate:[artworkDic objectForKey:@"releaseDate"]];
+                ArtworkModel *artworkObj = [[ArtworkModel alloc]initWithTrackName:[artworkDic objectForKey:@"trackName"] albumName:[artworkDic objectForKey:@"collectionCensoredName"] artworkUrl:[artworkDic objectForKey:@"artworkUrl100"] artistName:[artworkDic objectForKey:@"artistName"] price:[[artworkDic objectForKey:@"trackPrice"] stringValue] releaseDate:[artworkDic objectForKey:@"releaseDate"] currency:[artworkDic objectForKey:@"currency"]];
                 
                 NSLog(@"Name :%@", artworkObj.trackName);
                 [self.parsedResultArray addObject:artworkObj];
