@@ -14,16 +14,16 @@
 		82ABE95C1932857B0094D566 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 82ABE95B1932857B0094D566 /* main.m */; };
 		82ABE9601932857B0094D566 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 82ABE95F1932857B0094D566 /* AppDelegate.m */; };
 		82ABE9631932857B0094D566 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82ABE9611932857B0094D566 /* Main.storyboard */; };
-		82ABE9661932857B0094D566 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82ABE9651932857B0094D566 /* MasterViewController.m */; };
-		82ABE9691932857B0094D566 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82ABE9681932857B0094D566 /* DetailViewController.m */; };
 		82ABE96B1932857B0094D566 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82ABE96A1932857B0094D566 /* Images.xcassets */; };
 		82ABE9721932857B0094D566 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82ABE9711932857B0094D566 /* XCTest.framework */; };
 		82ABE9731932857B0094D566 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82ABE94F1932857B0094D566 /* Foundation.framework */; };
 		82ABE9741932857B0094D566 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82ABE9531932857B0094D566 /* UIKit.framework */; };
 		82ABE97C1932857B0094D566 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 82ABE97A1932857B0094D566 /* InfoPlist.strings */; };
 		82ABE97E1932857B0094D566 /* iTuneArtListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 82ABE97D1932857B0094D566 /* iTuneArtListTests.m */; };
-		82ABE98A1932B2580094D566 /* ArtworkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 82ABE9891932B2580094D566 /* ArtworkModel.m */; };
 		82ABE98D1932B6750094D566 /* paceholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 82ABE98C1932B6750094D566 /* paceholder.png */; };
+		82ABE9911932C73B0094D566 /* ArtworkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 82ABE9901932C73B0094D566 /* ArtworkModel.m */; };
+		82ABE9971932C76E0094D566 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82ABE9941932C76E0094D566 /* DetailViewController.m */; };
+		82ABE9981932C76E0094D566 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82ABE9961932C76E0094D566 /* MasterViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,19 +48,19 @@
 		82ABE95E1932857B0094D566 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; usesTabs = 0; };
 		82ABE95F1932857B0094D566 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		82ABE9621932857B0094D566 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		82ABE9641932857B0094D566 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		82ABE9651932857B0094D566 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		82ABE9671932857B0094D566 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		82ABE9681932857B0094D566 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		82ABE96A1932857B0094D566 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		82ABE9701932857B0094D566 /* iTuneArtListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTuneArtListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		82ABE9711932857B0094D566 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		82ABE9791932857B0094D566 /* iTuneArtListTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iTuneArtListTests-Info.plist"; sourceTree = "<group>"; };
 		82ABE97B1932857B0094D566 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		82ABE97D1932857B0094D566 /* iTuneArtListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iTuneArtListTests.m; sourceTree = "<group>"; };
-		82ABE9881932B2580094D566 /* ArtworkModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtworkModel.h; sourceTree = "<group>"; };
-		82ABE9891932B2580094D566 /* ArtworkModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtworkModel.m; sourceTree = "<group>"; };
 		82ABE98C1932B6750094D566 /* paceholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = paceholder.png; sourceTree = "<group>"; };
+		82ABE98F1932C73B0094D566 /* ArtworkModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtworkModel.h; sourceTree = "<group>"; };
+		82ABE9901932C73B0094D566 /* ArtworkModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtworkModel.m; sourceTree = "<group>"; };
+		82ABE9931932C76E0094D566 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		82ABE9941932C76E0094D566 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		82ABE9951932C76E0094D566 /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		82ABE9961932C76E0094D566 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,8 +90,8 @@
 		82ABE9431932857B0094D566 = {
 			isa = PBXGroup;
 			children = (
+				82ABE98E1932C73A0094D566 /* Model */,
 				82ABE98B1932B65F0094D566 /* Assets */,
-				82ABE9871932B2580094D566 /* Model */,
 				82ABE9551932857B0094D566 /* iTuneArtList */,
 				82ABE9771932857B0094D566 /* iTuneArtListTests */,
 				82ABE94E1932857B0094D566 /* Frameworks */,
@@ -122,13 +122,10 @@
 		82ABE9551932857B0094D566 /* iTuneArtList */ = {
 			isa = PBXGroup;
 			children = (
+				82ABE9921932C76E0094D566 /* ViewController */,
 				82ABE95E1932857B0094D566 /* AppDelegate.h */,
 				82ABE95F1932857B0094D566 /* AppDelegate.m */,
 				82ABE9611932857B0094D566 /* Main.storyboard */,
-				82ABE9641932857B0094D566 /* MasterViewController.h */,
-				82ABE9651932857B0094D566 /* MasterViewController.m */,
-				82ABE9671932857B0094D566 /* DetailViewController.h */,
-				82ABE9681932857B0094D566 /* DetailViewController.m */,
 				82ABE96A1932857B0094D566 /* Images.xcassets */,
 				82ABE9561932857B0094D566 /* Supporting Files */,
 			);
@@ -164,21 +161,33 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		82ABE9871932B2580094D566 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				82ABE9881932B2580094D566 /* ArtworkModel.h */,
-				82ABE9891932B2580094D566 /* ArtworkModel.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		82ABE98B1932B65F0094D566 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
 				82ABE98C1932B6750094D566 /* paceholder.png */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		82ABE98E1932C73A0094D566 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				82ABE98F1932C73B0094D566 /* ArtworkModel.h */,
+				82ABE9901932C73B0094D566 /* ArtworkModel.m */,
+			);
+			name = Model;
+			path = iTuneArtList/Model;
+			sourceTree = "<group>";
+		};
+		82ABE9921932C76E0094D566 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				82ABE9931932C76E0094D566 /* DetailViewController.h */,
+				82ABE9941932C76E0094D566 /* DetailViewController.m */,
+				82ABE9951932C76E0094D566 /* MasterViewController.h */,
+				82ABE9961932C76E0094D566 /* MasterViewController.m */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,10 +289,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				82ABE9601932857B0094D566 /* AppDelegate.m in Sources */,
-				82ABE98A1932B2580094D566 /* ArtworkModel.m in Sources */,
-				82ABE9661932857B0094D566 /* MasterViewController.m in Sources */,
+				82ABE9911932C73B0094D566 /* ArtworkModel.m in Sources */,
 				82ABE95C1932857B0094D566 /* main.m in Sources */,
-				82ABE9691932857B0094D566 /* DetailViewController.m in Sources */,
+				82ABE9971932C76E0094D566 /* DetailViewController.m in Sources */,
+				82ABE9981932C76E0094D566 /* MasterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
