@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ArtworkModel.h"
 
 @interface DetailViewController : UIViewController
+
+
+@property (strong, nonatomic) ArtworkModel *artworkObject;
 
 @property (weak, nonatomic) IBOutlet UIImageView *artworkImageView;
 

@@ -23,6 +23,7 @@
 		82ABE97C1932857B0094D566 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 82ABE97A1932857B0094D566 /* InfoPlist.strings */; };
 		82ABE97E1932857B0094D566 /* iTuneArtListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 82ABE97D1932857B0094D566 /* iTuneArtListTests.m */; };
 		82ABE98A1932B2580094D566 /* ArtworkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 82ABE9891932B2580094D566 /* ArtworkModel.m */; };
+		82ABE98D1932B6750094D566 /* paceholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 82ABE98C1932B6750094D566 /* paceholder.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		82ABE97D1932857B0094D566 /* iTuneArtListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iTuneArtListTests.m; sourceTree = "<group>"; };
 		82ABE9881932B2580094D566 /* ArtworkModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtworkModel.h; sourceTree = "<group>"; };
 		82ABE9891932B2580094D566 /* ArtworkModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtworkModel.m; sourceTree = "<group>"; };
+		82ABE98C1932B6750094D566 /* paceholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = paceholder.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 		82ABE9431932857B0094D566 = {
 			isa = PBXGroup;
 			children = (
+				82ABE98B1932B65F0094D566 /* Assets */,
 				82ABE9871932B2580094D566 /* Model */,
 				82ABE9551932857B0094D566 /* iTuneArtList */,
 				82ABE9771932857B0094D566 /* iTuneArtListTests */,
@@ -170,6 +173,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		82ABE98B1932B65F0094D566 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				82ABE98C1932B6750094D566 /* paceholder.png */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -246,6 +257,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82ABE98D1932B6750094D566 /* paceholder.png in Resources */,
 				82ABE96B1932857B0094D566 /* Images.xcassets in Resources */,
 				82ABE95A1932857B0094D566 /* InfoPlist.strings in Resources */,
 				82ABE9631932857B0094D566 /* Main.storyboard in Resources */,
